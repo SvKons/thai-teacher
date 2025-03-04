@@ -1,3 +1,5 @@
+'use strict';
+
 document.addEventListener('DOMContentLoaded', function () {
     let header = document.getElementById('myHeader');
     let page = document.getElementById('page');

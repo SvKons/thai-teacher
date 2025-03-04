@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles/reset.css" />
         <link rel="stylesheet" href="styles/styles.css" />
+        <link rel="stylesheet" href="https://unpkg.com/open-props/open-props.min.css" />
         <title>Thai Teacher Papin</title>
     </head>
     <body>
@@ -13,7 +14,6 @@
                 <nav class="nav">
                     <a href="#vision" class="nav__link">About me</a>
                     <a href="#knowledge" class="nav__link">Lessons</a>
-                    <a href="#space" class="nav__link">Reviews</a>
                     <a href="#future" class="nav__link">FAQ</a>
                     <button id="openmenu" class="nav__button button">
                         <span class="nav__line"></span>
@@ -25,19 +25,20 @@
 
         <main>
             <!-- Top block -->
+
             <section class="top">
-                <div class="top-block container">
-                    <div class="top-block__wrapper">
-                        <h1 class="top-block__title">
-                            Start today. <br />
-                            Learn for life.
+                <div class="top__wrapper container">
+                    <div class="top__block">
+                        <h1 class="top__title">
+                            Start today.<br />
+                            Learn real Thai.<br />
                         </h1>
-                        <div id="container" class="top-block__text-animate text-animate">
-                            <span class="top-block__text-top"></span>
-                            <span class="top-block__text-bottom"></span>
+                        <div id="container" class="top__text-animate text-animate">
+                            <span class="top__text-top"></span>
+                            <span class="top__text-bottom"></span>
                         </div>
 
-                        <svg id="filters" class="top-block__filters">
+                        <svg id="filters" class="top__filters">
                             <defs>
                                 <filter id="threshold">
                                     <feColorMatrix
@@ -52,20 +53,33 @@
                             </defs>
                         </svg>
                     </div>
-
-                    <div class="top-block__img-wrapper">
-                        <img src="img/papin.avif" alt="Papin's photo" class="top-block__img" />
-                    </div>
                 </div>
             </section>
 
             <!-- About me -->
 
-            <section>
-                <div class="about container">
-                    <div class="about__text-wrapper"></div>
+            <section class="about">
+                <div class="about__wrapper container">
+                    <div class="about__img-wrapper">
+                        <img src="img/papin.avif" alt="Papin's photo" class="about__img" />
+                    </div>
                     <div class="about__description">
-                        <h2 class="about__title title">Hi, I'm Teacher Papin!</h2>
+                        <div>
+                            <h2 class="about__title title">Hello, Sa-wat-dee khrap สวัสดีครับ, Thai language lovers!</h2>
+                            <span>I'm Teacher Papin!</span>
+                        </div>
+
+                        <div>
+                            <span>
+                                My heart lies in sharing the richness of the Thai language with the world, and I'm thrilled to welcome you to my online
+                                classroom!
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                What I Teach: I offer one-on-one online classes to teach you basic Thai conversation. No fuss, just easy and practical learning.
+                            </span>
+                        </div>
                         <div class="about__text-block">
                             <span>I've seen many people striving to learn Thai, and I understand the challenges that come with it.</span>
                             <span> That's why I've developed my own teaching method to make learning Thai easier and more effective.</span>
@@ -75,8 +89,73 @@
                             </span>
                         </div>
                     </div>
-                    <div class="about__img-wrapper">
-                        <img src="img/papin-3.avif" alt="Papin's photo" class="about__img" />
+                </div>
+            </section>
+
+            <!-- Statistics -->
+
+            <section class="statistics">
+                <div class="container">
+                    <div class="statistics__about">
+                        <div class="statistics__item">
+                            <span class="statistics__number increase-number" data-target="5">0</span>
+                            <span class="statistics__text-statistic">years of experience teaching</span>
+                        </div>
+                        <div class="statistics__item">
+                            <div><span class="statistics__number increase-number" data-target="280">0</span><span class="statistics__number">+</span></div>
+
+                            <span class="statistics__text-statistic">amazing students</span>
+                        </div>
+                        <div class="statistics__item">
+                            <div><span class="statistics__number increase-number" data-target="20">0</span><span class="statistics__number">+</span></div>
+                            <span class="statistics__text-statistic">countries my Students Come From</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content creator -->
+
+            <section>
+                <div class="container">Follow for more!</div>
+                <!-- video from IG -->
+            </section>
+
+            <!-- Scroll -->
+
+            <section>
+                <div class="feature-grid">
+                    <div class="row">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="row">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
                     </div>
                 </div>
             </section>
@@ -111,9 +190,347 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Choose -->
+
+            <section>
+                <div class="choose container">
+                    <h3>Why Choose Me</h3>
+                    <div>Simple Conversations: Learn Thai in a way that's easy to understand, focusing on everyday talk.</div>
+                    <div>
+                        Truly personal: Every lesson is carefully prepared with deeply understanding of each student learning process. Forget about those boring
+                        and repetitive programs!
+                    </div>
+                    <div>Fun and Friendly: Dive into Thai language and culture in a relaxed and enjoyable way.</div>
+                </div>
+            </section>
+
+            <!-- Section with photo from IG with students -->
+
+            <section>
+                <div class="container"></div>
+            </section>
+
+            <!-- Join -->
+
+            <section>
+                <div class="container">
+                    <div>
+                        Wherever you are, let's make learning Thai simple and fun together! Ready to start your Thai adventure? Join me at Papin's Thai Lessons!
+                    </div>
+                    <div>
+                        <a href="https://akkarawin-t.systeme.io/papinthaicourse">Buy lesson</a>
+                        <a href="https://papin.simplybook.asia/v2/">Book lesson</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Plan -->
+
+            <section class="lessons">
+                <div class="lessons__wrap">
+                    <div class="lessons__title-wrap container">
+                        <h2 class="lessons__title title">Choose what suits you</h2>
+                        <div>
+                            🔹 Personalized One-on-One Sessions – Tailored lessons designed to help you master Thai with confidence. 🔹 Real-Life Scenarios –
+                            Engage in practical exercises that simulate everyday conversations, participate in role-plays, dialogues and activities for hands-on
+                            practice. 🔹 Essential Vocabulary & Phrases – Learn key words and expressions to navigate real-world situations. 📚 Choose a lesson
+                            and start speaking Thai with confidence!
+                            <p class="lessons__review">FREE Slide's lesson after the class!</p>
+                        </div>
+                    </div>
+
+                    <div class="lessons__slider slick-slider">
+                        <div class="lessons__slide slick-slide">
+                            <div class="lessons__content">
+                                <div class="lessons__img-wrap">
+                                    <img src="img/introduction.jpg" class="lessons__img" alt="Basic Thai" />
+                                </div>
+                                <p class="lessons__author">Greetings & introductions</p>
+                                <p class="lessons__review">
+                                    Greet people, introduce yourself naturally, share personal details, and engage in friendly conversations with confidence.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lessons__slide slick-slide">
+                            <div class="lessons__content">
+                                <div class="lessons__img-wrap">
+                                    <img src="img/market.jpg" class="lessons__img" alt="Basic Thai" />
+                                </div>
+                                <p class="lessons__author">Speak Thai at the market</p>
+                                <p class="lessons__review">Learn how to inquire about prices, negotiate discounts, and navigate local markets like a pro.</p>
+                            </div>
+                        </div>
+
+                        <div class="lessons__slide slick-slide">
+                            <div class="lessons__content">
+                                <div class="lessons__img-wrap">
+                                    <img src="img/restaurant.jpg" class="lessons__img" alt="Basic Thai" />
+                                </div>
+                                <p class="lessons__author">Speak Thai at the restaurant</p>
+                                <p class="lessons__review">
+                                    Order food, ask for recommendations, and request the bill with ease while mastering restaurant-related vocabulary.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lessons__slide slick-slide">
+                            <div class="lessons__content">
+                                <div class="lessons__img-wrap">
+                                    <img src="img/direction.jpg" class="lessons__img" alt="Basic Thai" />
+                                </div>
+                                <p class="lessons__author">Asking the direction</p>
+                                <p class="lessons__review">
+                                    Learn essential phrases for asking directions, interpreting maps, and navigating confidently in Thailand.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lessons__slide slick-slide">
+                            <div class="lessons__content">
+                                <div class="lessons__img-wrap">
+                                    <img src="img/number.jpg" class="lessons__img" alt="Basic Thai" />
+                                </div>
+                                <p class="lessons__author">Get to know Thai Number</p>
+                                <p class="lessons__review">
+                                    Master counting from 1 to 1 million! Learn how to confidently use numbers for shopping, bargaining, and daily interactions.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lessons__slide slick-slide">
+                            <div class="lessons__content">
+                                <div class="lessons__img-wrap">
+                                    <img src="img/food-flavors.jpg" class="lessons__img" alt="Basic Thai" />
+                                </div>
+                                <p class="lessons__author">Food and Flavors</p>
+                                <p class="lessons__review">
+                                    Discover how to describe flavors, adjust spice levels, and discuss food like a local in casual and dining settings.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lessons__slide slick-slide">
+                            <div class="lessons__content">
+                                <div class="lessons__img-wrap">
+                                    <img src="img/time.jpg" class="lessons__img" alt="Basic Thai" />
+                                </div>
+                                <p class="lessons__author">Telling the Time</p>
+                                <p class="lessons__review">
+                                    Learn how to ask and tell the time using the informal system. Practice time-related conversations in everyday situations.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lessons__slide slick-slide">
+                            <div class="lessons__content">
+                                <div class="lessons__img-wrap">
+                                    <img src="img/days.jpg" class="lessons__img" alt="Basic Thai" />
+                                </div>
+                                <p class="lessons__author">Days of the week</p>
+                                <p class="lessons__review">
+                                    Master the days of the week in Thai! Learn how to ask about and discuss dates, schedule events, and make plans effortlessly.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lessons__buttons">
+                        <button class="lessons__button lessons__button_prev"><</button>
+                        <button class="lessons__button lessons__button_next">></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Scroll -->
+
+            <section>
+                <div class="feature-grid">
+                    <div class="row">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="row">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+
+            <section class="questions container">
+                <div class="questions__wrap">
+                    <h2 class="questions__title title">Frequently asked questions</h2>
+                    <div class="questions__block">
+                        <ul class="questions__list">
+                            <li class="questions__item">
+                                <a class="questions__expand">
+                                    <p class="questions__question">
+                                        How long does it take to start speaking Thai? I want to start speaking Thai as soon as possible! How long does it
+                                        usually take for your students to start talking?
+                                    </p>
+                                    <div class="questions__arrow">+</div>
+                                </a>
+
+                                <div class="questions__answer">
+                                    <span class="questions__text">
+                                        It depends on your level, the number of lessons, and how much you practice on your own. Most of my students can
+                                        confidently use basic phrases and understand simple dialogues within 1-2 months.
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="questions__item">
+                                <a class="questions__expand">
+                                    <p class="questions__question">
+                                        Is your course suitable for beginners? I have no knowledge of Thai at all. Do you teach complete beginners, or do I need
+                                        some basic skills?
+                                    </p>
+                                    <div class="questions__arrow">+</div>
+                                </a>
+
+                                <div class="questions__answer">
+                                    <span class="questions__text">
+                                        Of course! The course is designed for everyone, even if you have never studied Thai before. I explain the basics step by
+                                        step, help with pronunciation, and provide effective memorization techniques.
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="questions__item">
+                                <a class="questions__expand">
+                                    <p class="questions__question">
+                                        How are the lessons structured? What is a typical lesson like? Do we focus more on speaking, grammar, or exercises?
+                                    </p>
+                                    <div class="questions__arrow">+</div>
+                                </a>
+
+                                <div class="questions__answer">
+                                    <span class="questions__text questions__text_position">
+                                        We practice a lot of speaking, go through grammar, work on pronunciation, and listen to real Thai speech. I tailor the
+                                        materials to your level and goals.
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="questions__item">
+                                <a class="questions__expand">
+                                    <p class="questions__question">
+                                        Can I take lessons at a convenient time? My schedule is unpredictable. Can I adjust the lesson times to fit my routine?
+                                    </p>
+                                    <div class="questions__arrow">+</div>
+                                </a>
+
+                                <div class="questions__answer">
+                                    <span class="questions__text">
+                                        Yes, the schedule is flexible, and we can find a time that works best for you. If your schedule changes, we can always
+                                        reschedule lessons.
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="questions__item">
+                                <a class="questions__expand">
+                                    <p class="questions__question">Do you give homework? I want to practice between lessons. Will I have any homework?</p>
+                                    <div class="questions__arrow">+</div>
+                                </a>
+
+                                <div class="questions__answer">
+                                    <span class="questions__text">
+                                        Yes, but it won’t be boring exercises! I give engaging tasks that help you learn faster—listening to Thai, repeating
+                                        phrases, watching videos, or doing small speaking challenges.
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="questions__item">
+                                <a class="questions__expand">
+                                    <p class="questions__question">
+                                        Will I be able to travel in Thailand without problems after your course? I want to visit Thailand and feel confident
+                                        communicating in shops, cafes, and on the streets. Will I be able to do that after your course?
+                                    </p>
+                                    <div class="questions__arrow">+</div>
+                                </a>
+
+                                <div class="questions__answer">
+                                    <span class="questions__text">
+                                        Absolutely! I teach practical, real-life Thai that will help you navigate cities, order food, ask for directions, and
+                                        interact with locals.
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="questions__item">
+                                <a class="questions__expand">
+                                    <p class="questions__question">
+                                        Do you teach only online, or are in-person lessons available? Can we meet in person for lessons, or are they only
+                                        online?
+                                    </p>
+                                    <div class="questions__arrow">+</div>
+                                </a>
+
+                                <div class="questions__answer">
+                                    <span class="questions__text">
+                                        Right now, I only teach online, but it’s actually more convenient—you can learn from anywhere, and all materials are
+                                        easily accessible.
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </main>
 
+        <!-- Footer -->
+
+        <footer>
+            <div class="container">
+                <div class="socials"></div>
+                <div class="contacts"></div>
+                <div class="copyright"></div>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/baseline-status@1.0.4/baseline-status.min.js"></script>
         <script src="scripts/nav.js"></script>
         <script src="scripts/animate-text.js"></script>
+        <script src="scripts/accordion.js"></script>
+        <script src="scripts/horizontal-scroll.js"></script>
+        <script src="scripts/increase-number.js"></script>
+        <script src="scripts/slider.js"></script>
     </body>
 </html>

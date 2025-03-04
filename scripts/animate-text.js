@@ -1,9 +1,11 @@
+'use strict';
+
 const elts = {
-    textTop: document.querySelector('.top-block__text-top'),
-    textBottom: document.querySelector('.top-block__text-bottom'),
+    textTop: document.querySelector('.top__text-top'),
+    textBottom: document.querySelector('.top__text-bottom'),
 };
 
-const texts = ['Learn', 'Speak', 'Explore', 'Grow', 'Master', 'Enjoy', 'Improve', 'Achieve'];
+const texts = ['Speak', 'Explore', 'Grow', 'Master', 'Enjoy', 'Improve', 'Achieve'];
 
 const morphTime = 1;
 const cooldownTime = 0.25;
