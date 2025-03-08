@@ -5917,6 +5917,8 @@
 
 $(document).ready(function () {
     const sliderlessons = $('.lessons__slider').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
         centerMode: true,
         variableWidth: true,
         slidesToShow: 7,
