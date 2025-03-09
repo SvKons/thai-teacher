@@ -12,9 +12,9 @@
         <header id="myHeader" class="header">
             <div class="container">
                 <nav class="nav">
-                    <a href="#vision" class="nav__link">About me</a>
-                    <a href="#knowledge" class="nav__link">Lessons</a>
-                    <a href="#future" class="nav__link">FAQ</a>
+                    <a href="#about" class="nav__link">About me</a>
+                    <a href="#lessons" class="nav__link">Lessons</a>
+                    <a href="#faq" class="nav__link">FAQ</a>
                     <button id="openmenu" class="nav__button button">
                         <span class="nav__line"></span>
                         <span></span>
@@ -58,15 +58,12 @@
 
             <!-- About me -->
 
-            <section class="about">
+            <section class="about" id="about">
                 <div class="container">
                     <div class="about__wrapper">
                         <div class="about__wrapper">
                             <img src="img/papino-main.jpg" alt="Papin's photo" class="about__img" />
                         </div>
-                        <!-- <div class="about__colorful-wrapper">
-                            <div class="about__colorful"></div>
-                        </div> -->
                         <div class="about__description">
                             <div class="about__text-wrapper">
                                 <h2 class="second-title title">Hello, Sa-wat-dee khrap สวัสดีครับ, <br />Thai language lovers!</h2>
@@ -327,7 +324,10 @@
                         <div class="situations__wrapper">
                             <h2 class="situations__title second-title">Sound Familiar?</h2>
                             <div class="situations__block-wrap">
-                                <div class="situations__text-top">Some situations...</div>
+                                <div class="situations__text-wrap">
+                                    <div class="situations__text-top">Some situations...</div>
+                                    <div class="situations__line"></div>
+                                </div>
                                 <div class="situations__blocks">
                                     <div class="situations__card">
                                         You regularly need to do weird hand gestures to be understood, but in the end, you pull out your phone and use Google
@@ -342,10 +342,13 @@
                                         language
                                     </div>
                                 </div>
-                                <div class="situations__text-bottom">
-                                    <span>Do you recognize yourself?</span>
-                                    <br />
-                                    <span>If so, I got something for you!</span>
+                                <div class="situations__text-bottom-wrap">
+                                    <div class="situations__line"></div>
+                                    <div class="situations__text-bottom">
+                                        <span>Do you recognize yourself?</span>
+                                        <br />
+                                        <span>If so, I got something for you!</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -355,26 +358,34 @@
 
             <!-- Plan -->
 
-            <section class="lessons">
+            <section class="lessons" id="lessons">
                 <div class="lessons__wrap">
                     <div class="lessons__title-wrap container">
                         <h2 class="lessons__title second-title">Choose what suits you</h2>
-                        <div class="lessons__top-blocks">
-                            <div class="lessons__top-block">
-                                <span class="lessons__item">
-                                    🔹 Personalized One-on-One Sessions — Tailored lessons designed to help you master Thai with confidence.
-                                </span>
-                                <span class="lessons__item">
-                                    🔹 Real-Life Scenarios — Engage in practical exercises that simulate everyday conversations, participate in role-plays,
-                                    dialogues and activities for hands-on practice.
-                                </span>
-                                <span class="lessons__item">
-                                    🔹 Essential Vocabulary & Phrases — Learn key words and expressions to navigate real-world situations.
-                                </span>
-                                <span class="lessons__item">📚 Choose a lesson and start speaking Thai with confidence!</span>
+                        <div class="lessons__blocks">
+                            <div class="lessons__block lessons__block_left">
+                                <div class="lessons__top-block">
+                                    <span class="lessons__item">
+                                        🔹 Personalized One-on-One Sessions — Tailored lessons designed to help you master Thai with confidence.
+                                    </span>
+                                    <span class="lessons__item">
+                                        🔹 Real-Life Scenarios — Engage in practical exercises that simulate everyday conversations, participate in role-plays,
+                                        dialogues and activities for hands-on practice.
+                                    </span>
+                                    <span class="lessons__item">
+                                        🔹 Essential Vocabulary & Phrases — Learn key words and expressions to navigate real-world situations.
+                                    </span>
+                                </div>
+
+                                <div class="lessons__bottom-block">
+                                    <span class="lessons__item"> 📚 Choose a lesson and start speaking Thai with confidence! </span>
+                                    <div class="lessons__link-block">
+                                        <a href="https://akkarawin-t.systeme.io/papinthaicourse" class="lessons__link">Buy lesson</a>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="lessons__top-block">
+                            <div class="lessons__block">
                                 <div class="lessons__img-wrap">
                                     <img src="img/papin-2.jpg" alt="Photo of Papin" class="lessons__main-img" />
                                 </div>
@@ -510,106 +521,37 @@
             <!-- Choose -->
 
             <section class="choose">
-                <div class="choose__wrapper container">
-                    <div class="choose__central-block">
-                        <div class="choose__hgroup">
-                            <div class="choose__img-wrap">
-                                <img class="choose__central-image" src="img/papin.avif" alt="Photo of Papin" />
+                <div class="choose__section">
+                    <div class="choose__wrapper container">
+                        <div class="choose__central-block">
+                            <div class="choose__hgroup">
+                                <div class="choose__img-wrap">
+                                    <img class="choose__central-image" src="img/papin.avif" alt="Photo of Papin" />
+                                </div>
+                                <h2 class="choose__title second-title">Why Choose Me</h2>
                             </div>
-                            <h2 class="choose__title second-title">Why Choose Me</h2>
                         </div>
-                    </div>
-                    <ul class="choose__cards" style="--nth-siblings: 4">
-                        <li class="choose__card" style="--nth-child: 1">
-                            <div class="choose__avatar-link-wrapper">
-                                <div class="choose__visual">
-                                    <img class="choose__avatar-img" src="img/avatar.png" alt="Ethan B., DevOps Engineer" />
-                                </div>
-                                <div class="choose__tooltiptext">
-                                    <div class="team-content-wrapper">
-                                        Simple Conversations: Learn Thai in a way that's easy to understand, focusing on everyday talk.
-                                    </div>
-                                </div>
+                        <div class="choose__blocks">
+                            <div class="choose__block">
+                                Practice with a Native Speaker: Learn from a teacher who speaks Thai as their native language and perfect your pronunciation.
                             </div>
-                        </li>
-                        <li class="choose__card" style="--nth-child: 2">
-                            <div class="choose__avatar-link-wrapper">
-                                <div class="choose__visual">
-                                    <img class="choose__avatar-img" src="img/avatar.png" alt="Ava L., UI/UX Designer" />
-                                </div>
-                                <div class="choose__tooltiptext">
-                                    <div class="team-content-wrapper">
-                                        Truly personal: Every lesson is carefully prepared with deeply understanding of each student learning process. Forget
-                                        about those boring and repetitive programs!
-                                    </div>
-                                </div>
+                            <div class="choose__block">
+                                Truly personal: Every lesson is carefully prepared with deeply understanding of each student learning process. Forget about
+                                those boring and repetitive programs!
                             </div>
-                        </li>
-                        <li class="choose__card" style="--nth-child: 3">
-                            <div class="choose__avatar-link-wrapper">
-                                <div class="choose__visual">
-                                    <img class="choose__avatar-img" src="img/avatar.png" alt="Liam J., Mobile Developer" />
-                                </div>
-                                <div class="choose__tooltiptext">
-                                    <div class="team-content-wrapper">
-                                        Fun and Friendly: Dive into Thai language and culture in a relaxed and enjoyable way.
-                                    </div>
-                                </div>
+                            <div class="choose__block">
+                                Flexible Schedule: Choose a convenient time for your lessons to fit seamlessly into your daily routine.
                             </div>
-                        </li>
-                        <li class="choose__card" style="--nth-child: 4">
-                            <div class="choose__avatar-link-wrapper">
-                                <div class="choose__visual">
-                                    <img class="choose__avatar-img" src="img/avatar.png" alt="Sophia K., Data Scientist" />
-                                </div>
-                                <div class="choose__tooltiptext">
-                                    <div class="team-content-wrapper">
-                                        Practice with a Native Speaker: Learn from a teacher who speaks Thai as their native language and perfect your
-                                        pronunciation.
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="choose__card" style="--nth-child: 5">
-                            <div class="choose__avatar-link-wrapper">
-                                <div class="choose__visual">
-                                    <img class="choose__avatar-img" src="img/avatar.png" alt="Codey X, AI Code Assistant" />
-                                </div>
-                                <div class="choose__tooltiptext">
-                                    <div class="team-content-wrapper">
-                                        Flexible Schedule: Choose a convenient time for your lessons to fit seamlessly into your daily routine.
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Content creator -->
-
-            <section>
-                <div class="container">Follow for more!</div>
-                <!-- video from IG -->
-            </section>
-
-            <!-- Join -->
-
-            <section>
-                <div class="container">
-                    <div>
-                        Wherever you are, let's make learning Thai simple and fun together! Ready to start your Thai adventure? Join me at Papin's Thai Lessons!
-                    </div>
-                    <div>
-                        <a href="https://akkarawin-t.systeme.io/papinthaicourse">Buy lesson</a>
-                        <a href="https://papin.simplybook.asia/v2/">Book lesson</a>
+                            <div class="choose__block">Simple Conversations: Learn Thai in a way that's easy to understand, focusing on everyday talk.</div>
+                            <div class="choose__block">Fun and Friendly: Dive into Thai language and culture in a relaxed and enjoyable way.</div>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <!-- FAQ -->
 
-            <section class="questions">
+            <section class="questions" id="faq">
                 <div class="questions__wrap container">
                     <h2 class="questions__title second-title">Frequently asked questions</h2>
                     <div class="questions__block">
@@ -735,11 +677,20 @@
 
         <!-- Footer -->
 
-        <footer>
-            <div class="container">
-                <div class="socials"></div>
-                <div class="contacts"></div>
-                <div class="copyright"></div>
+        <footer class="footer">
+            <div class="footer__wrap container">
+                <div class="footer__contacts">
+                    <span>If you need help or have any questions, you can reach out to me here:</span>
+                    <div class="footer__social">
+                        <a href="" class="footer__link">
+                            <img src="img/icon-ig.png" class="footer__img" alt="Icon of Instagram" />
+                        </a>
+                        <a href="mailto:papinothailand@gmail.com" class="footer__link">
+                            <img src="img/icon-letter.png" class="footer__img" alt="Icon of letter" />
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__copyright">© 2025 | By Teacher Papin | All rights reserved</div>
             </div>
         </footer>
 
