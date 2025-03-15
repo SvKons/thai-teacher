@@ -61,7 +61,7 @@
             <section class="about" id="about">
                 <div class="container">
                     <div class="about__wrapper">
-                        <div class="about__wrapper">
+                        <div class="about__img-wrap">
                             <img src="img/papino-main.jpg" alt="Papin's photo" class="about__img" />
                         </div>
                         <div class="about__description">
@@ -223,7 +223,7 @@
                             Thai lessons, your trip will become easier and more exciting!
                         </p>
                         <div class="adventure__text-list">
-                            <div class="adventure__wrap1">
+                            <div class="adventure__wrap-text">
                                 <span class="adventure__text-item">
                                     🌴 Explore incredible places — from the bustling streets of Bangkok to the paradise beaches of Phuket and Samui, as well as
                                     the ancient temples of Chiang Mai and Chiang Rai in the north.
@@ -240,7 +240,7 @@
                             <div class="adventure__wrap">
                                 <img src="img/chiang-mai.jpg" alt="Photo of Chiang Mai" class="adventure__img" />
                             </div>
-                            <div class="adventure__wrap1">
+                            <div class="adventure__wrap-text">
                                 <span class="adventure__text-item">
                                     🍜 Enjoy authentic Thai cuisine — order food at local markets without fear of making a mistake.
                                 </span>
@@ -256,7 +256,7 @@
                             <div class="adventure__wrap">
                                 <img src="img/city.jpg" alt="Photo of city" class="adventure__img" />
                             </div>
-                            <div class="adventure__wrap1">
+                            <div class="adventure__wrap-text">
                                 <span class="adventure__text-item">
                                     🛕 Immerse yourself in the culture — communicate with locals, learn about Thai traditions, and discover new horizons!
                                 </span>
@@ -279,7 +279,7 @@
                             <div class="adventure__wrap">
                                 <img src="img/songkran-2.jpg" alt="Photo of Songkran" class="adventure__img" />
                             </div>
-                            <div class="adventure__wrap1">
+                            <div class="adventure__wrap-text">
                                 <span class="adventure__text-item">
                                     🌊 Songkran – Thai New Year (April) – join the fun-filled water fights on the streets!
                                 </span>
@@ -288,7 +288,7 @@
                             <div class="adventure__wrap">
                                 <img src="img/lantern-festival.jpg" alt="Photo of Lantern Festival" class="adventure__img" />
                             </div>
-                            <div class="adventure__wrap1">
+                            <div class="adventure__wrap-text">
                                 <span class="adventure__text-item">
                                     🏮 Yi Peng – Lantern Festival (November) – make a wish and release your glowing lantern into the sky.
                                 </span>
@@ -297,7 +297,7 @@
                             <div class="adventure__wrap">
                                 <img src="img/lantern-festival-2.jpg" alt="Photo of Lantern Festival" class="adventure__img" />
                             </div>
-                            <div class="adventure__wrap1">
+                            <div class="adventure__wrap-text">
                                 <span class="adventure__text-item">
                                     🎆 Loy Krathong – Festival of Lights (November) – float your decorated lantern on the water and let go of all your worries.
                                 </span>
@@ -319,35 +319,37 @@
             <!-- Situations -->
 
             <section class="situations">
-                <div class="situations__section">
-                    <div class="container">
-                        <div class="situations__wrapper">
-                            <h2 class="situations__title second-title">Sound Familiar?</h2>
-                            <div class="situations__block-wrap">
-                                <div class="situations__text-wrap">
-                                    <div class="situations__text-top">Some situations...</div>
-                                    <div class="situations__line"></div>
-                                </div>
-                                <div class="situations__blocks">
-                                    <div class="situations__card">
-                                        You regularly need to do weird hand gestures to be understood, but in the end, you pull out your phone and use Google
-                                        Translate
+                <div class="container">
+                    <div class="situations__section">
+                        <div class="container">
+                            <div class="situations__wrapper">
+                                <h2 class="situations__title second-title">Sound Familiar?</h2>
+                                <div class="situations__block-wrap">
+                                    <div class="situations__text-wrap">
+                                        <div class="situations__text-top">Some situations...</div>
+                                        <div class="situations__line"></div>
                                     </div>
-                                    <div class="situations__card">
-                                        At the restaurant, you start speaking English to the staff, and they kind of panic and go find their colleagues who can
-                                        speak English a bit better than them
+                                    <div class="situations__blocks">
+                                        <div class="situations__card">
+                                            You regularly need to do weird hand gestures to be understood, but in the end, you pull out your phone and use
+                                            Google Translate
+                                        </div>
+                                        <div class="situations__card">
+                                            At the restaurant, you start speaking English to the staff, and they kind of panic and go find their colleagues who
+                                            can speak English a bit better than them
+                                        </div>
+                                        <div class="situations__card">
+                                            ​You feel a special connection with Thailand, but a part of you still feels ashamed of not being able to speak the
+                                            local language
+                                        </div>
                                     </div>
-                                    <div class="situations__card">
-                                        ​You feel a special connection with Thailand, but a part of you still feels ashamed of not being able to speak the local
-                                        language
-                                    </div>
-                                </div>
-                                <div class="situations__text-bottom-wrap">
-                                    <div class="situations__line"></div>
-                                    <div class="situations__text-bottom">
-                                        <span>Do you recognize yourself?</span>
-                                        <br />
-                                        <span>If so, I got something for you!</span>
+                                    <div class="situations__text-bottom-wrap">
+                                        <div class="situations__line"></div>
+                                        <div class="situations__text-bottom">
+                                            <span>Do you recognize yourself?</span>
+                                            <br />
+                                            <span>If so, I got something for you!</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -523,27 +525,28 @@
             <section class="choose">
                 <div class="choose__section">
                     <div class="choose__wrapper container">
-                        <div class="choose__central-block">
-                            <div class="choose__hgroup">
-                                <div class="choose__img-wrap">
-                                    <img class="choose__central-image" src="img/papin.avif" alt="Photo of Papin" />
+                        <div class="choose__grid">
+                            <div class="choose__central-block choose__central-block_main">
+                                <div class="choose__hgroup">
+                                    <div class="choose__img-wrap">
+                                        <img class="choose__central-image" src="img/papin.avif" alt="Photo of Papin" />
+                                    </div>
+                                    <h2 class="choose__title second-title">Why Choose Me</h2>
                                 </div>
-                                <h2 class="choose__title second-title">Why Choose Me</h2>
                             </div>
-                        </div>
-                        <div class="choose__blocks">
                             <div class="choose__block">
                                 Practice with a Native Speaker: Learn from a teacher who speaks Thai as their native language and perfect your pronunciation.
                             </div>
-                            <div class="choose__block">
-                                Truly personal: Every lesson is carefully prepared with deeply understanding of each student learning process. Forget about
-                                those boring and repetitive programs!
-                            </div>
+                            <div class="choose__block">Fun and Friendly: Dive into Thai language and culture in a relaxed and enjoyable way.</div>
                             <div class="choose__block">
                                 Flexible Schedule: Choose a convenient time for your lessons to fit seamlessly into your daily routine.
                             </div>
                             <div class="choose__block">Simple Conversations: Learn Thai in a way that's easy to understand, focusing on everyday talk.</div>
-                            <div class="choose__block">Fun and Friendly: Dive into Thai language and culture in a relaxed and enjoyable way.</div>
+
+                            <div class="choose__block">
+                                Truly personal: Every lesson is carefully prepared with deeply understanding of each student learning process. Forget about
+                                those boring and repetitive programs!
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -5923,7 +5923,7 @@ $(document).ready(function () {
         variableWidth: true,
         slidesToShow: 7,
         slidesToScroll: 1,
-        // centerPadding: '20px',
+        centerPadding: '20px',
         dots: false,
         arrows: false,
         swipe: true,
