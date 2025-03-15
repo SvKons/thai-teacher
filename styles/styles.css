@@ -53,6 +53,11 @@ body {
   padding: 0 20px;
   margin: 0 auto;
 }
+@media (max-width: 425px) {
+  .container {
+    padding: 0 10px;
+  }
+}
 
 .title {
   font-size: 3.75rem;
@@ -87,9 +92,10 @@ body {
     font-size: 1.75rem;
   }
 }
-@media (max-width: 475px) {
+@media (max-width: 425px) {
   .second-title {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
+    text-align: center;
     margin-bottom: 4px;
   }
 }
@@ -1410,7 +1416,7 @@ header {
   .adventure__text-list {
     grid-template-columns: repeat(auto-fill, minmax(min(228px, 100%), 1fr));
   }
-  .situations {
+  .situations__section {
     padding: var(--section-padding-sm);
   }
   .situations__text-top, .situations__text-bottom {
@@ -1492,7 +1498,7 @@ header {
     gap: 10px;
   }
 }
-@media (max-width: 475px) {
+@media (max-width: 425px) {
   .top__title, .top__text-top, .top__text-bottom {
     font-size: 1.5rem;
   }
@@ -1524,5 +1530,142 @@ header {
     display: grid;
     place-content: center;
     gap: 6px;
+  }
+  .adventure__block-wrap:first-of-type::before {
+    top: 84px;
+    right: 35px;
+    background-size: 220px auto;
+    width: 220px;
+    height: 220px;
+  }
+  .adventure__text-list {
+    gap: 10px;
+  }
+  .adventure__wrap {
+    max-width: 190px;
+    max-height: 180px;
+  }
+  .adventure__text-list {
+    gap: 4px;
+    grid-template-columns: repeat(auto-fill, minmax(min(137px, 100%), 1fr));
+  }
+  .adventure__block-wrap {
+    gap: 40px;
+  }
+  .adventure__block-wrap:first-of-type::after {
+    bottom: 122px;
+    right: 32px;
+  }
+  .adventure__block-wrap:last-of-type::after {
+    left: 204px;
+    bottom: 90px;
+    background-size: 170px auto;
+    width: 170px;
+    height: 170px;
+  }
+  .situations {
+    padding: var(--section-padding-xs);
+  }
+  .situations__line {
+    display: none;
+  }
+  .situations__wrapper {
+    text-align: center;
+  }
+  .situations__text-wrap, .situations__text-bottom-wrap {
+    justify-content: center;
+    width: 100%;
+  }
+  .situations__text-top, .situations__text-bottom {
+    font-size: 1.125rem;
+  }
+  .situations__card {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  .lessons {
+    padding: var(--section-padding-xs);
+  }
+  .lessons__blocks {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .lessons__title-wrap {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+  .lessons__top-block {
+    gap: 8px;
+  }
+  .lessons__item, .lessons__link, .lessons__bottom-text {
+    font-size: 1rem;
+  }
+  .lessons__slide {
+    min-width: 300px;
+  }
+  .lessons__content {
+    min-height: 328px;
+  }
+  .lessons__title-lesson {
+    font-size: 1.125rem;
+    margin-bottom: 3px;
+  }
+  .lessons__link {
+    width: 100%;
+    text-align: center;
+  }
+  .lessons__button {
+    padding: 18px;
+  }
+  .choose {
+    padding: var(--section-padding-xs);
+  }
+  .choose__grid {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+  .choose__central-block_main {
+    grid-column: 1/1;
+    grid-row: 1/1;
+  }
+  .questions {
+    background: none;
+  }
+  .questions__title {
+    padding-bottom: 0;
+  }
+  .footer__wrap {
+    flex-wrap: wrap;
+    font-size: 1rem;
+  }
+  .footer__contacts {
+    flex-direction: row;
+    gap: 34px;
+  }
+}
+@media (max-width: 375px) {
+  .adventure__block-wrap:first-of-type::before {
+    top: 96px;
+    right: 27px;
+  }
+  .adventure__block-wrap:first-of-type::after {
+    bottom: 165px;
+    right: 16px;
+  }
+  .adventure__block-wrap:last-of-type::after {
+    left: 178px;
+    bottom: 136px;
+  }
+}
+@media (max-width: 320px) {
+  .adventure__block-wrap:first-of-type::before {
+    top: 132px;
+    right: 24px;
+  }
+  .adventure__block-wrap:first-of-type::after {
+    bottom: 187px;
+    right: -4px;
+  }
+  .adventure__block-wrap:last-of-type::after {
+    left: 138px;
   }
 }/*# sourceMappingURL=styles.css.map */

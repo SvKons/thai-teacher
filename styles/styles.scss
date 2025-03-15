@@ -60,6 +60,10 @@ body {
     max-width: 1440px;
     padding: 0 20px;
     margin: 0 auto;
+
+    @media (max-width: 425px) {
+        padding: 0 10px;
+    }
 }
 
 .title {
@@ -91,8 +95,9 @@ body {
         font-size: 1.75rem;
     }
 
-    @media (max-width: 475px) {
-        font-size: 1.5rem;
+    @media (max-width: 425px) {
+        font-size: 1.375rem;
+        text-align: center;
         margin-bottom: 4px;
     }
 }
@@ -1699,7 +1704,9 @@ header {
     }
 
     .situations {
-        padding: var(--section-padding-sm);
+        &__section {
+            padding: var(--section-padding-sm);
+        }
 
         &__text-top,
         &__text-bottom {
@@ -1809,7 +1816,7 @@ header {
     }
 }
 
-@media (max-width: 475px) {
+@media (max-width: 425px) {
     .top {
         &__title,
         &__text-top,
@@ -1856,6 +1863,197 @@ header {
             display: grid;
             place-content: center;
             gap: 6px;
+        }
+    }
+
+    .adventure {
+        &__block-wrap {
+            &:first-of-type::before {
+                top: 84px;
+                right: 35px;
+                background-size: 220px auto;
+                width: 220px;
+                height: 220px;
+            }
+        }
+
+        &__text-list {
+            gap: 10px;
+        }
+
+        &__wrap {
+            max-width: 190px;
+            max-height: 180px;
+        }
+
+        &__text-list {
+            gap: 4px;
+            grid-template-columns: repeat(auto-fill, minmax(min(137px, 100%), 1fr));
+        }
+
+        &__block-wrap {
+            gap: 40px;
+
+            &:first-of-type::after {
+                bottom: 122px;
+                right: 32px;
+            }
+
+            &:last-of-type::after {
+                left: 204px;
+                bottom: 90px;
+                background-size: 170px auto;
+                width: 170px;
+                height: 170px;
+            }
+        }
+    }
+
+    .situations {
+        padding: var(--section-padding-xs);
+
+        &__line {
+            display: none;
+        }
+
+        &__wrapper {
+            text-align: center;
+        }
+
+        &__text-wrap,
+        &__text-bottom-wrap {
+            justify-content: center;
+            width: 100%;
+        }
+
+        &__text-top,
+        &__text-bottom {
+            font-size: 1.125rem;
+        }
+
+        &__card {
+            font-size: 1rem;
+            padding: 10px;
+        }
+    }
+
+    .lessons {
+        padding: var(--section-padding-xs);
+
+        &__blocks {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &__title-wrap {
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        &__top-block {
+            gap: 8px;
+        }
+
+        &__item,
+        &__link,
+        &__bottom-text {
+            font-size: 1rem;
+        }
+
+        &__slide {
+            min-width: 300px;
+        }
+
+        &__content {
+            min-height: 328px;
+        }
+
+        &__title-lesson {
+            font-size: 1.125rem;
+            margin-bottom: 3px;
+        }
+
+        &__link {
+            width: 100%;
+            text-align: center;
+        }
+
+        &__button {
+            padding: 18px;
+        }
+    }
+
+    .choose {
+        padding: var(--section-padding-xs);
+
+        &__grid {
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+        }
+
+        &__central-block_main {
+            grid-column: 1 / 1;
+            grid-row: 1 / 1;
+        }
+    }
+
+    .questions {
+        background: none;
+
+        &__title {
+            padding-bottom: 0;
+        }
+    }
+
+    .footer {
+        &__wrap {
+            flex-wrap: wrap;
+            font-size: 1rem;
+        }
+
+        &__contacts {
+            flex-direction: row;
+            gap: 34px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .adventure {
+        &__block-wrap {
+            &:first-of-type::before {
+                top: 96px;
+                right: 27px;
+            }
+
+            &:first-of-type::after {
+                bottom: 165px;
+                right: 16px;
+            }
+
+            &:last-of-type::after {
+                left: 178px;
+                bottom: 136px;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .adventure {
+        &__block-wrap {
+            &:first-of-type::before {
+                top: 132px;
+                right: 24px;
+            }
+
+            &:first-of-type::after {
+                bottom: 187px;
+                right: -4px;
+            }
+
+            &:last-of-type::after {
+                left: 138px;
+            }
         }
     }
 }
