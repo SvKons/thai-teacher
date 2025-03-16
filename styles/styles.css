@@ -69,6 +69,7 @@ body {
   font-weight: 500;
   font-size: 2.75rem;
   text-transform: uppercase;
+  margin-bottom: 40px;
 }
 @media (max-width: 1440px) {
   .second-title {
@@ -273,19 +274,23 @@ header {
   font-weight: 600;
   width: 100%;
   height: 100vh;
-  background: url(../img/bangkok-2.avif) no-repeat 50% 50%;
+  background: url(../img/bkk.jpg) no-repeat 50% 50%;
+  background-size: cover;
   background-attachment: fixed;
   top: 0;
   padding-top: 100px;
 }
-.top::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5) no-repeat 0% 80%;
+@supports (background-image: url("bkk.avif")) {
+  .top {
+    background-image: url("../img/bkk.avif");
+  }
+}
+@supports not (background-image: url("bkk.avif")) {
+  @supports (background-image: url("bkk.webp")) {
+    .top {
+      background-image: url("../img/bkk.webp");
+    }
+  }
 }
 .top__wrapper {
   position: relative;
@@ -456,7 +461,7 @@ header {
   transform: scale(1.15);
 }
 
-/* Animation scroll*/
+/* Animation scroll */
 .animation__feature-grid {
   display: grid;
   place-content: center;
@@ -492,8 +497,7 @@ header {
   margin: 0 auto;
 }
 .situations__wrapper {
-  position: relative;
-  z-index: 50;
+  padding: 0 20px;
 }
 .situations__block-wrap {
   display: flex;
@@ -517,13 +521,13 @@ header {
   box-shadow: -2px 5px 15px 0px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
   cursor: default;
-  padding: 46px;
+  padding: 30px;
 }
 .situations__card:hover {
   transform: scale(1.05);
 }
 .situations__text-top, .situations__text-bottom {
-  max-width: 352px;
+  max-width: 378px;
   font-size: 2rem;
   color: var(--beige);
   background-color: var(--zian-green);
@@ -534,7 +538,7 @@ header {
 .situations__text-bottom {
   align-self: flex-end;
   width: 100%;
-  max-width: 468px;
+  max-width: 564px;
 }
 .situations__text-wrap {
   display: flex;
@@ -686,7 +690,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 25px;
   margin-bottom: 80px;
 }
 .lessons__blocks {
@@ -719,6 +722,9 @@ header {
   font-size: 1.75rem;
   line-height: 1.5;
 }
+.lessons__bottom-item {
+  font-size: 1.5rem;
+}
 .lessons__link {
   display: inline-block;
   font-size: 1.5rem;
@@ -738,7 +744,6 @@ header {
 }
 .lessons__img-wrap {
   max-width: 800px;
-  max-width: 500px;
 }
 .lessons__img {
   width: 100%;
@@ -1137,6 +1142,9 @@ header {
   .lessons__item {
     font-size: 1.5rem;
   }
+  .lessons__img-wrap {
+    max-width: 500px;
+  }
   .choose {
     padding: var(--section-padding-lg);
   }
@@ -1243,6 +1251,9 @@ header {
   }
   .situations {
     padding: var(--section-padding-md);
+  }
+  .situations__wrapper {
+    padding: 0;
   }
   .situations__section {
     padding: var(--section-padding-md);
@@ -1499,6 +1510,13 @@ header {
   }
 }
 @media (max-width: 425px) {
+  .nav {
+    height: 40px;
+  }
+  .nav__link {
+    font-size: 0.875rem;
+    padding: 12px 0;
+  }
   .top__title, .top__text-top, .top__text-bottom {
     font-size: 1.5rem;
   }
