@@ -1,14 +1,14 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
-    const rows = document.querySelectorAll('.animation__row');
+$(document).ready(function () {
+    const $rows = $('.animation__row');
 
-    window.addEventListener('scroll', () => {
-        const scrollOffset = window.scrollY;
+    $(window).on('scroll', function () {
+        const scrollOffset = $(window).scrollTop();
 
-        rows.forEach((row, index) => {
+        $rows.each(function (index) {
             const direction = index % 2 === 0 ? 1 : -1;
-            row.style.transform = `translateX(${scrollOffset * 0.1 * direction}px)`;
+            $(this).css('transform', `translateX(${scrollOffset * 0.1 * direction}px)`);
         });
     });
 });

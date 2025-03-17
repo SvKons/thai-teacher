@@ -36,7 +36,6 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -49,6 +48,7 @@ body {
 }
 
 .container {
+  overflow-x: hidden;
   max-width: 1440px;
   padding: 0 20px;
   margin: 0 auto;
@@ -101,16 +101,39 @@ body {
   }
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(13, 48, 35, 0.8);
+  color: var(--beige);
+  border: 1px solid rgba(255, 255, 255, 0.143);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+  z-index: 10000;
+}
+.scroll-to-top:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 425px) {
+  .scroll-to-top {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 /* Fonts */
 @font-face {
   font-family: "Cinzel";
-  src: local("cinzel"), url("../fonts/cinzel-regular.woff2") format("woff2"), url("../fonts/cinzel-regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Cinzel";
-  src: local("cinzel"), url("../fonts/cinzel-medium.woff2") format("woff2"), url("../fonts/cinzel-medium.woff") format("woff");
+  src: "cinzel", url("../fonts/cinzel-medium.woff2") format("woff2"), url("../fonts/cinzel-medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
@@ -118,24 +141,6 @@ body {
   font-family: "Cinzel";
   src: local("cinzel"), url("../fonts/cinzel-semi-bold.woff2") format("woff2"), url("../fonts/cinzel-semi-bold.woff") format("woff");
   font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Cinzel";
-  src: local("cinzel"), url("../fonts/cinzel-bold.woff2") format("woff2"), url("../fonts/cinzel-bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Cinzel";
-  src: local("cinzel"), url("../fonts/cinzel-extra-bold.woff2") format("woff2"), url("../fonts/cinzel-extra-bold.woff") format("woff");
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Cinzel";
-  src: local("cinzel"), url("../fonts/cinzel-black.woff2") format("woff2"), url("../fonts/cinzel-black.woff") format("woff");
-  font-weight: 900;
   font-style: normal;
 }
 @font-face {
@@ -152,20 +157,8 @@ body {
 }
 @font-face {
   font-family: "Montserrat";
-  src: local("montserrat"), url("../fonts/montserrat-semi-bold.woff2") format("woff2"), url("../fonts/montserrat-semi-bold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
   src: local("montserrat"), url("../fonts/montserrat-bold.woff2") format("woff2"), url("../fonts//montserrat-bold.woff") format("woff");
   font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: local("montserrat"), url("../fonts/montserrat-extra-bold.woff2") format("woff2"), url("../fonts/montserrat-extra-bold.woff") format("woff");
-  font-weight: 800;
   font-style: normal;
 }
 @font-face {
@@ -299,6 +292,7 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  overflow: hidden;
 }
 .top__block {
   display: flex;
@@ -396,8 +390,8 @@ header {
 .adventure__block-wrap:first-of-type::before {
   content: "";
   position: absolute;
-  top: 112px;
-  left: -260px;
+  top: 42px;
+  left: 24px;
   background: url(../img/airplane-2.png) no-repeat;
   background-size: 360px auto;
   width: 360px;
@@ -421,12 +415,12 @@ header {
 .adventure__block-wrap:last-of-type::after {
   content: "";
   position: absolute;
-  bottom: 32px;
-  left: -340px;
-  background: url("../img/airplane.png") no-repeat;
-  background-size: 500px auto;
-  width: 500px;
-  height: 500px;
+  bottom: 80px;
+  right: -140px;
+  background: url(../img/airplane.png) no-repeat;
+  background-size: 450px auto;
+  width: 450px;
+  height: 450px;
   opacity: 0.3;
   z-index: -1;
 }
@@ -532,7 +526,6 @@ header {
   color: var(--beige);
   background-color: var(--zian-green);
   border-radius: 30px;
-  box-shadow: -2px 5px 15px 0px rgba(0, 0, 0, 0.5);
   padding: 50px;
 }
 .situations__text-bottom {
@@ -663,12 +656,12 @@ header {
   .choose__block:nth-child(3) {
     top: 80px;
     right: 120px;
-    transform: translate(40%, -2%);
+    transform: translate(18%, -2%);
   }
   .choose__block:nth-child(4) {
     bottom: 0;
     left: 5%;
-    transform: translate(-25%, -172%);
+    transform: translate(-12%, -172%);
   }
   .choose__block:nth-child(5) {
     bottom: 0;
@@ -818,9 +811,10 @@ header {
   margin-top: 16px;
 }
 .lessons__button {
+  font-family: var(--main-font);
+  font-weight: 900;
   background-color: var(--grey-lemon-green);
   color: var(--dark-grey);
-  font-weight: bold;
   border: none;
   outline: none;
   border-radius: 10px;
@@ -1074,8 +1068,8 @@ header {
     left: 30px;
   }
   .adventure__block-wrap:last-of-type::after {
-    bottom: 55px;
-    left: 128px;
+    bottom: 85px;
+    right: -42px;
     opacity: 0.2;
   }
   .choose__img-wrap {
@@ -1128,7 +1122,7 @@ header {
   }
   .adventure__block-wrap:last-of-type::after {
     bottom: 25px;
-    left: 28px;
+    right: 28px;
   }
   .situations {
     padding: var(--section-padding-lg);
@@ -1233,24 +1227,28 @@ header {
     font-size: 1.25rem;
   }
   .adventure__block-wrap:first-of-type::before {
-    top: 20px;
-    background-size: 320px auto;
-    width: 320px;
-    height: 320px;
+    top: 30px;
+    background-size: 220px auto;
+    width: 220px;
+    height: 220px;
+    rotate: 21deg;
   }
   .adventure__block-wrap:first-of-type::after {
-    background-size: 180px auto;
-    width: 180px;
-    height: 180px;
+    background-size: 140px auto;
+    width: 140px;
+    height: 140px;
+    bottom: 68px;
+    right: 55px;
   }
   .adventure__block-wrap:not(:last-child) {
     margin-bottom: 20px;
   }
   .adventure__block-wrap:last-of-type::after {
-    bottom: 80px;
-    background-size: 430px auto;
-    width: 440px;
-    height: 440px;
+    background-size: 310px auto;
+    width: 310px;
+    height: 310px;
+    right: -57px;
+    bottom: 53px;
   }
   .situations {
     padding: var(--section-padding-md);
@@ -1425,10 +1423,11 @@ header {
     right: 47px;
   }
   .adventure__block-wrap:last-of-type::after {
-    left: 78px;
     background-size: 240px auto;
     width: 240px;
     height: 240px;
+    bottom: 68px;
+    right: -62px;
   }
   .adventure__text-list {
     grid-template-columns: repeat(auto-fill, minmax(min(228px, 100%), 1fr));
@@ -1584,7 +1583,7 @@ header {
     right: 32px;
   }
   .adventure__block-wrap:last-of-type::after {
-    left: 204px;
+    left: 234px;
     bottom: 90px;
     background-size: 170px auto;
     width: 170px;

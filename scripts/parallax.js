@@ -15,12 +15,10 @@ $(window).load(function () {
         aboutHeight = $('about').height(),
         heightDocument = windowHeight + $('.content').height() + $('about').height() - 20;
 
-    // Definindo o tamanho do elemento pra animar
     $('#scroll-animate, #scroll-animate-main').css({
         height: heightDocument + 'px',
     });
 
-    // Definindo o tamanho dos elementos top e conteúdo
     $('top').css({
         height: windowHeight + 'px',
         'line-height': windowHeight + 'px',
@@ -32,7 +30,6 @@ $(window).load(function () {
 
     scrollabout(window.scrollY, aboutHeight);
 
-    // ao dar rolagem
     window.onscroll = function () {
         let scroll = window.scrollY;
 
