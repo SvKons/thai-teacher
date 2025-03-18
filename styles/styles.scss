@@ -553,7 +553,7 @@ header {
     &__blocks {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
+        gap: 20px;
         width: 100%;
     }
 
@@ -586,12 +586,13 @@ header {
     }
 
     &__text-bottom {
-        align-self: flex-end;
         width: 100%;
         max-width: 564px;
+        align-self: flex-end;
     }
 
     &__text-wrap {
+        width: 100%;
         display: flex;
         align-items: center;
         gap: 20px;
@@ -921,15 +922,11 @@ header {
         border-radius: 10px;
         box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
         cursor: pointer;
-        padding: 8px;
+        padding: 16px;
 
         &:hover {
             transform: scale(1.05);
             transition: transform 0.3s;
-        }
-
-        @media (min-width: 1024px) {
-            padding: 16px;
         }
     }
 }
@@ -1256,7 +1253,7 @@ header {
         }
 
         &__about {
-            grid-template-columns: repeat(3, 370px);
+            grid-template-columns: repeat(3, 298px);
         }
     }
 
@@ -1301,6 +1298,7 @@ header {
 
         &__img-wrap {
             max-width: 500px;
+            align-self: center;
         }
     }
 
@@ -1403,7 +1401,7 @@ header {
         }
 
         &__about {
-            grid-template-columns: repeat(3, 260px);
+            grid-template-columns: repeat(3, 225px);
         }
     }
 
@@ -1411,7 +1409,7 @@ header {
         padding: var(--section-padding-md);
 
         &__text-list {
-            grid-template-columns: repeat(auto-fill, minmax(min(314px, 100%), 1fr));
+            grid-template-columns: repeat(3, 1fr);
         }
 
         &__text {
@@ -1468,6 +1466,10 @@ header {
         &__text-bottom {
             font-size: 1.5rem;
             padding: 24px;
+        }
+
+        &__text-bottom {
+            max-width: 404px;
         }
 
         &__block-wrap {
@@ -1589,6 +1591,19 @@ header {
     }
 }
 
+@media (max-width: 916px) {
+    .adventure {
+        &__block-wrap {
+            &:first-of-type::after {
+                background-size: 120px auto;
+                width: 120px;
+                height: 120px;
+                bottom: 52px;
+            }
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .nav {
         &__link {
@@ -1629,7 +1644,7 @@ header {
 
         &__about {
             gap: 8px 0;
-            grid-template-columns: repeat(3, 200px);
+            grid-template-columns: repeat(3, 188px);
         }
 
         &__number {
@@ -1655,17 +1670,15 @@ header {
         }
 
         &__wrap-text {
-            font-size: 1rem;
+            font-size: 1.125rem;
         }
 
         &__block-wrap {
             &:first-of-type::before {
-                top: -11px;
+                top: 25px;
                 background-size: 280px auto;
                 width: 280px;
                 height: 280px;
-                left: unset;
-                right: 74px;
                 rotate: 25deg;
             }
 
@@ -1673,21 +1686,21 @@ header {
                 background-size: 130px auto;
                 width: 140px;
                 height: 130px;
-                bottom: 44px;
-                right: 47px;
+                bottom: 65px;
+                right: 74px;
             }
 
             &:last-of-type::after {
-                background-size: 240px auto;
-                width: 240px;
-                height: 240px;
-                bottom: 68px;
-                right: -62px;
+                background-size: 160px auto;
+                width: 160px;
+                height: 160px;
+                bottom: 58px;
+                right: 78px;
             }
         }
 
         &__text-list {
-            grid-template-columns: repeat(auto-fill, minmax(min(228px, 100%), 1fr));
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
@@ -1808,6 +1821,140 @@ header {
     }
 }
 
+@media (max-width: 658px) {
+    .adventure {
+        &__block-wrap {
+            &:first-of-type::after {
+                bottom: 116px;
+            }
+        }
+    }
+
+    .choose {
+        &__grid {
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+        }
+
+        &__central-block_main {
+            grid-column: 1 / 1;
+            grid-row: 1 / 1;
+        }
+
+        &__block {
+            max-width: 100%;
+        }
+
+        &__central-image {
+            margin-bottom: -10px;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .adventure {
+        &__block-wrap {
+            &:last-of-type::after {
+                bottom: 86px;
+                right: 58px;
+            }
+        }
+    }
+}
+
+@media (max-width: 614px) {
+    .statistics {
+        &__about {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .lessons {
+        &__blocks {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+@media (max-width: 598px) {
+    .adventure {
+        &__block-wrap {
+            &:first-of-type::before {
+                top: 53px;
+                background-size: 240px auto;
+                width: 240px;
+                height: 240px;
+            }
+        }
+    }
+
+    .questions {
+        background-position: 117% 0%;
+    }
+}
+
+@media (max-width: 578px) {
+    .adventure {
+        &__block-wrap {
+            &:first-of-type::after {
+                bottom: 132px;
+                right: 62px;
+            }
+
+            &:last-of-type::after {
+                bottom: 118px;
+                right: 50px;
+            }
+        }
+    }
+
+    .situations {
+        &__line {
+            display: none;
+        }
+
+        &__text-wrap,
+        &__text-bottom-wrap {
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 546px) {
+    .adventure {
+        &__wrap-text {
+            font-size: 1rem;
+        }
+
+        &__block-wrap {
+            &:last-of-type::after {
+                bottom: 94px;
+            }
+        }
+    }
+}
+
+@media (max-width: 533px) {
+    .adventure {
+        &__block-wrap {
+            &:last-of-type::after {
+                bottom: 98px;
+                right: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 477px) {
+    .top {
+        &__title,
+        &__text-top,
+        &__text-bottom {
+            font-size: 1.5rem;
+        }
+    }
+}
+
 @media (max-width: 425px) {
     .nav {
         height: 40px;
@@ -1815,14 +1962,6 @@ header {
         &__link {
             font-size: 0.875rem;
             padding: 12px 0;
-        }
-    }
-
-    .top {
-        &__title,
-        &__text-top,
-        &__text-bottom {
-            font-size: 1.5rem;
         }
     }
 
@@ -1870,11 +2009,10 @@ header {
     .adventure {
         &__block-wrap {
             &:first-of-type::before {
-                top: 84px;
-                right: 35px;
-                background-size: 220px auto;
-                width: 220px;
-                height: 220px;
+                top: 106px;
+                background-size: 140px auto;
+                width: 140px;
+                height: 140px;
             }
         }
 
@@ -1896,16 +2034,16 @@ header {
             gap: 40px;
 
             &:first-of-type::after {
-                bottom: 122px;
+                bottom: 160px;
                 right: 32px;
             }
 
             &:last-of-type::after {
-                left: 234px;
-                bottom: 90px;
-                background-size: 170px auto;
-                width: 170px;
-                height: 170px;
+                right: 22px;
+                bottom: 124px;
+                background-size: 130px auto;
+                width: 130px;
+                height: 130px;
             }
         }
     }
@@ -1941,10 +2079,6 @@ header {
     .lessons {
         padding: var(--section-padding-xs);
 
-        &__blocks {
-            grid-template-columns: repeat(1, 1fr);
-        }
-
         &__title-wrap {
             gap: 8px;
             margin-bottom: 30px;
@@ -1979,7 +2113,7 @@ header {
         }
 
         &__button {
-            padding: 18px;
+            padding: 10px;
         }
     }
 
@@ -1998,7 +2132,7 @@ header {
     }
 
     .questions {
-        background: none;
+        background-image: none;
 
         &__title {
             padding-bottom: 0;
@@ -2026,23 +2160,46 @@ header {
     }
 }
 
+@media (max-width: 400px) {
+    .adventure {
+        &__block-wrap {
+            &:last-of-type::after {
+                display: none;
+            }
+        }
+    }
+}
+
 @media (max-width: 375px) {
     .adventure {
         &__block-wrap {
             &:first-of-type::before {
-                top: 96px;
-                right: 27px;
+                top: 134px;
+                left: unset;
+                right: 43px;
             }
 
             &:first-of-type::after {
-                bottom: 165px;
-                right: 16px;
+                bottom: 95px;
+                right: 26px;
+                background-size: 90px auto;
+                width: 90px;
+                height: 90px;
             }
 
             &:last-of-type::after {
                 left: 178px;
                 bottom: 136px;
             }
+        }
+
+        &__text-list {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &__wrap {
+            max-width: 270px;
+            max-height: 260px;
         }
     }
 }
@@ -2051,13 +2208,16 @@ header {
     .adventure {
         &__block-wrap {
             &:first-of-type::before {
-                top: 132px;
-                right: 24px;
+                top: 144px;
+                right: 60px;
             }
 
             &:first-of-type::after {
-                bottom: 187px;
-                right: -4px;
+                bottom: 102px;
+                right: 6px;
+                background-size: 60px auto;
+                width: 60px;
+                height: 60px;
             }
 
             &:last-of-type::after {
