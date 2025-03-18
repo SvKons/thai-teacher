@@ -2180,11 +2180,11 @@ header {
             }
 
             &:first-of-type::after {
-                bottom: 95px;
-                right: 26px;
-                background-size: 90px auto;
-                width: 90px;
-                height: 90px;
+                bottom: 112px;
+                right: 6px;
+                background-size: 50px auto;
+                width: 50px;
+                height: 50px;
             }
 
             &:last-of-type::after {
@@ -2210,14 +2210,6 @@ header {
             &:first-of-type::before {
                 top: 144px;
                 right: 60px;
-            }
-
-            &:first-of-type::after {
-                bottom: 102px;
-                right: 6px;
-                background-size: 60px auto;
-                width: 60px;
-                height: 60px;
             }
 
             &:last-of-type::after {
