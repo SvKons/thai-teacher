@@ -36,6 +36,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -48,7 +49,6 @@ body {
 }
 
 .container {
-  overflow-x: hidden;
   max-width: 1440px;
   padding: 0 20px;
   margin: 0 auto;
