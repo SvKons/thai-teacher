@@ -1,1 +1,1 @@
-## [Thai Teacher Papin](https://svkons.github.io/thai-teacher/)
+## [Thai Teacher Papin](https://svkons.github.io/thai-teacher-papin/)
