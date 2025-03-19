@@ -101,6 +101,45 @@ body {
   }
 }
 
+.link-block {
+  margin-top: 20px;
+}
+
+.link {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--beige);
+  background-color: var(--zian-green);
+  border-radius: 30px;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+.link:hover {
+  opacity: 0.8;
+}
+.link:focus {
+  opacity: 0.8;
+}
+.link:active {
+  background-color: var(--zian-green);
+}
+@media (max-width: 768px) {
+  .link {
+    font-size: 1.375rem;
+    border-radius: 20px;
+    padding: 14px;
+  }
+}
+@media (max-width: 425px) {
+  .link {
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
@@ -225,6 +264,7 @@ header {
   font-weight: 600;
   width: 100%;
   height: 100vh;
+  background-color: var(--dark-grey);
   background: url(../img/bkk.jpg) no-repeat 50% 50%;
   background-size: cover;
   background-attachment: fixed;
@@ -245,12 +285,15 @@ header {
 }
 .top__wrapper {
   position: relative;
+  max-width: 1590px;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
   overflow: hidden;
+  margin: 0 auto;
+  padding: 0 150px;
 }
 .top__block {
   display: flex;
@@ -324,6 +367,11 @@ header {
   max-width: 100px;
   width: 100%;
 }
+.about__text_weight {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 20px;
+}
 
 /* Adventure */
 .adventure {
@@ -361,7 +409,7 @@ header {
 .adventure__block-wrap:first-of-type::after {
   content: "";
   position: absolute;
-  bottom: 82px;
+  bottom: -38px;
   right: 40px;
   background: url("../img/adventure-awaits.png") no-repeat;
   background-size: 200px auto;
@@ -373,7 +421,7 @@ header {
 .adventure__block-wrap:last-of-type::after {
   content: "";
   position: absolute;
-  bottom: 80px;
+  bottom: 210px;
   right: -140px;
   background: url(../img/airplane.png) no-repeat;
   background-size: 450px auto;
@@ -391,6 +439,7 @@ header {
 }
 .adventure__text {
   font-size: 1.75rem;
+  font-weight: 600;
 }
 .adventure__text-item, .adventure__wrap {
   width: 200px;
@@ -676,23 +725,6 @@ header {
 }
 .lessons__bottom-item {
   font-size: 1.5rem;
-}
-.lessons__link {
-  display: inline-block;
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-decoration: none;
-  color: var(--beige);
-  background-color: var(--zian-green);
-  border-radius: 30px;
-  transition: opacity 0.3s ease;
-  padding: 20px;
-}
-.lessons__link:hover {
-  opacity: 0.8;
-}
-.lessons__link:active {
-  background-color: var(--zian-green-active);
 }
 .lessons__img-wrap {
   max-width: 800px;
@@ -1014,6 +1046,9 @@ header {
   .top__title, .top__text-top, .top__text-bottom {
     font-size: 5rem;
   }
+  .top__wrapper {
+    padding: 0 100px;
+  }
   .statistics__number {
     font-size: 6.25rem;
   }
@@ -1022,8 +1057,8 @@ header {
     left: 30px;
   }
   .adventure__block-wrap:last-of-type::after {
-    bottom: 85px;
-    right: -42px;
+    bottom: 208px;
+    right: -162px;
     opacity: 0.2;
   }
   .choose__img-wrap {
@@ -1075,8 +1110,11 @@ header {
     font-size: 1.25rem;
   }
   .adventure__block-wrap:last-of-type::after {
-    bottom: 25px;
-    right: 28px;
+    bottom: 205px;
+    right: -122px;
+    background-size: 360px auto;
+    width: 360px;
+    height: 360px;
   }
   .situations {
     padding: var(--section-padding-lg);
@@ -1122,12 +1160,6 @@ header {
   .adventure__text-list {
     grid-template-columns: repeat(auto-fill, minmax(min(314px, 100%), 1fr));
   }
-  .adventure__block-wrap:first-of-type::before {
-    top: 20px;
-    background-size: 320px auto;
-    width: 320px;
-    height: 320px;
-  }
   .adventure__block-wrap:first-of-type::after {
     background-size: 180px auto;
     width: 180px;
@@ -1141,6 +1173,9 @@ header {
   }
   .top__title, .top__text-top, .top__text-bottom {
     font-size: 4rem;
+  }
+  .top__wrapper {
+    padding: 0 20px;
   }
   .about {
     padding: var(--section-padding-md);
@@ -1156,6 +1191,10 @@ header {
   .about__img-wrap {
     max-width: 420px;
     min-width: 310px;
+  }
+  .about__text_weight {
+    font-size: 1.375rem;
+    margin-top: 10px;
   }
   .statistics {
     padding: var(--padding-md);
@@ -1192,7 +1231,7 @@ header {
     background-size: 140px auto;
     width: 140px;
     height: 140px;
-    bottom: 68px;
+    bottom: -32px;
     right: 55px;
   }
   .adventure__block-wrap:not(:last-child) {
@@ -1202,8 +1241,8 @@ header {
     background-size: 310px auto;
     width: 310px;
     height: 310px;
-    right: -57px;
-    bottom: 53px;
+    right: -118px;
+    bottom: 193px;
   }
   .situations {
     padding: var(--section-padding-md);
@@ -1230,7 +1269,7 @@ header {
   .lessons {
     padding: var(--section-padding-md);
   }
-  .lessons__item, .lessons__link, .lessons__bottom-text {
+  .lessons__item, .lessons__bottom-text {
     font-size: 1.25rem;
   }
   .lessons__bottom-item {
@@ -1321,7 +1360,15 @@ header {
     background-size: 120px auto;
     width: 120px;
     height: 120px;
-    bottom: 52px;
+    bottom: -39px;
+    right: 35px;
+  }
+  .adventure__block-wrap:last-of-type::after {
+    background-size: 280px auto;
+    width: 280px;
+    height: 280px;
+    right: -78px;
+    bottom: 206px;
   }
 }
 @media (max-width: 768px) {
@@ -1383,15 +1430,15 @@ header {
     background-size: 130px auto;
     width: 140px;
     height: 130px;
-    bottom: 65px;
+    bottom: -5px;
     right: 74px;
   }
   .adventure__block-wrap:last-of-type::after {
-    background-size: 160px auto;
-    width: 160px;
-    height: 160px;
-    bottom: 58px;
-    right: 78px;
+    background-size: 170px auto;
+    width: 170px;
+    height: 170px;
+    bottom: 168px;
+    right: 58px;
   }
   .adventure__text-list {
     grid-template-columns: repeat(2, 1fr);
@@ -1419,15 +1466,11 @@ header {
   .lessons {
     padding: var(--section-padding-sm);
   }
-  .lessons__item, .lessons__link, .lessons__bottom-text {
+  .lessons__item, .lessons__bottom-text {
     font-size: 1.125rem;
   }
   .lessons__bottom-block {
     gap: 10px;
-  }
-  .lessons__link {
-    border-radius: 20px;
-    padding: 14px;
   }
   .lessons__block {
     gap: 20px;
@@ -1483,7 +1526,7 @@ header {
 }
 @media (max-width: 658px) {
   .adventure__block-wrap:first-of-type::after {
-    bottom: 116px;
+    bottom: 16px;
   }
   .choose__grid {
     grid-template-columns: repeat(1, 1fr);
@@ -1502,8 +1545,8 @@ header {
 }
 @media (max-width: 620px) {
   .adventure__block-wrap:last-of-type::after {
-    bottom: 86px;
-    right: 58px;
+    bottom: 176px;
+    right: 28px;
   }
 }
 @media (max-width: 614px) {
@@ -1527,12 +1570,12 @@ header {
 }
 @media (max-width: 578px) {
   .adventure__block-wrap:first-of-type::after {
-    bottom: 132px;
+    bottom: 22px;
     right: 62px;
   }
   .adventure__block-wrap:last-of-type::after {
-    bottom: 118px;
-    right: 50px;
+    bottom: 200px;
+    right: 20px;
   }
   .situations__line {
     display: none;
@@ -1546,13 +1589,13 @@ header {
     font-size: 1rem;
   }
   .adventure__block-wrap:last-of-type::after {
-    bottom: 94px;
+    bottom: 184px;
   }
 }
 @media (max-width: 533px) {
   .adventure__block-wrap:last-of-type::after {
-    bottom: 98px;
-    right: 30px;
+    bottom: 188px;
+    right: 10px;
   }
 }
 @media (max-width: 477px) {
@@ -1581,6 +1624,10 @@ header {
   .about__text-block {
     font-size: 1rem;
     gap: 4px;
+  }
+  .about__text_weight {
+    font-size: 1.125rem;
+    margin-top: 10px;
   }
   .statistics__about {
     gap: 21px 0;
@@ -1618,12 +1665,12 @@ header {
     gap: 40px;
   }
   .adventure__block-wrap:first-of-type::after {
-    bottom: 160px;
+    bottom: 16px;
     right: 32px;
   }
   .adventure__block-wrap:last-of-type::after {
     right: 22px;
-    bottom: 124px;
+    bottom: 242px;
     background-size: 130px auto;
     width: 130px;
     height: 130px;
@@ -1658,7 +1705,7 @@ header {
   .lessons__top-block {
     gap: 8px;
   }
-  .lessons__item, .lessons__link, .lessons__bottom-text {
+  .lessons__item, .lessons__bottom-text {
     font-size: 1rem;
   }
   .lessons__slide {
@@ -1670,10 +1717,6 @@ header {
   .lessons__title-lesson {
     font-size: 1.125rem;
     margin-bottom: 3px;
-  }
-  .lessons__link {
-    width: 100%;
-    text-align: center;
   }
   .lessons__button {
     padding: 10px;

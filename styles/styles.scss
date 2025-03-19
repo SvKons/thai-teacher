@@ -103,6 +103,46 @@ body {
     }
 }
 
+.link-block {
+    margin-top: 20px;
+}
+
+.link {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--beige);
+    background-color: var(--zian-green);
+    border-radius: 30px;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:focus {
+        opacity: 0.8;
+    }
+
+    &:active {
+        background-color: var(--zian-green);
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1.375rem;
+        border-radius: 20px;
+        padding: 14px;
+    }
+
+    @media (max-width: 425px) {
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+}
+
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
@@ -238,6 +278,7 @@ header {
     font-weight: 600;
     width: 100%;
     height: 100vh;
+    background-color: var(--dark-grey);
     background: url(../img/bkk.jpg) no-repeat 50% 50%;
     background-size: cover;
     background-attachment: fixed;
@@ -256,12 +297,15 @@ header {
 
     &__wrapper {
         position: relative;
+        max-width: 1590px;
         height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 20px;
         overflow: hidden;
+        margin: 0 auto;
+        padding: 0 150px;
     }
 
     &__block {
@@ -348,6 +392,14 @@ header {
         max-width: 100px;
         width: 100%;
     }
+
+    &__text {
+        &_weight {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+    }
 }
 
 /* Adventure */
@@ -391,7 +443,7 @@ header {
             &::after {
                 content: '';
                 position: absolute;
-                bottom: 82px;
+                bottom: -38px;
                 right: 40px;
                 background: url('../img/adventure-awaits.png') no-repeat;
                 background-size: 200px auto;
@@ -406,7 +458,7 @@ header {
             &::after {
                 content: '';
                 position: absolute;
-                bottom: 80px;
+                bottom: 210px;
                 right: -140px;
                 background: url(../img/airplane.png) no-repeat;
                 background-size: 450px auto;
@@ -428,6 +480,7 @@ header {
 
     &__text {
         font-size: 1.75rem;
+        font-weight: 600;
     }
 
     &__text-item,
@@ -761,26 +814,6 @@ header {
 
     &__bottom-item {
         font-size: 1.5rem;
-    }
-
-    &__link {
-        display: inline-block;
-        font-size: 1.5rem;
-        font-weight: 700;
-        text-decoration: none;
-        color: var(--beige);
-        background-color: var(--zian-green);
-        border-radius: 30px;
-        transition: opacity 0.3s ease;
-        padding: 20px;
-
-        &:hover {
-            opacity: 0.8;
-        }
-
-        &:active {
-            background-color: var(--zian-green-active);
-        }
     }
 
     &__img-wrap {
@@ -1141,6 +1174,10 @@ header {
         &__text-bottom {
             font-size: 5rem;
         }
+
+        &__wrapper {
+            padding: 0 100px;
+        }
     }
 
     .statistics__number {
@@ -1154,8 +1191,8 @@ header {
                 left: 30px;
             }
             &:last-of-type::after {
-                bottom: 85px;
-                right: -42px;
+                bottom: 208px;
+                right: -162px;
                 opacity: 0.2;
             }
         }
@@ -1229,8 +1266,11 @@ header {
 
         &__block-wrap {
             &:last-of-type::after {
-                bottom: 25px;
-                right: 28px;
+                bottom: 205px;
+                right: -122px;
+                background-size: 360px auto;
+                width: 360px;
+                height: 360px;
             }
         }
     }
@@ -1295,13 +1335,6 @@ header {
         }
 
         &__block-wrap {
-            &:first-of-type::before {
-                top: 20px;
-                background-size: 320px auto;
-                width: 320px;
-                height: 320px;
-            }
-
             &:first-of-type::after {
                 background-size: 180px auto;
                 width: 180px;
@@ -1323,6 +1356,10 @@ header {
         &__text-bottom {
             font-size: 4rem;
         }
+
+        &__wrapper {
+            padding: 0 20px;
+        }
     }
 
     .about {
@@ -1341,6 +1378,13 @@ header {
         &__img-wrap {
             max-width: 420px;
             min-width: 310px;
+        }
+
+        &__text {
+            &_weight {
+                font-size: 1.375rem;
+                margin-top: 10px;
+            }
         }
     }
 
@@ -1388,7 +1432,7 @@ header {
                 background-size: 140px auto;
                 width: 140px;
                 height: 140px;
-                bottom: 68px;
+                bottom: -32px;
                 right: 55px;
             }
         }
@@ -1404,8 +1448,8 @@ header {
                 background-size: 310px auto;
                 width: 310px;
                 height: 310px;
-                right: -57px;
-                bottom: 53px;
+                right: -118px;
+                bottom: 193px;
             }
         }
     }
@@ -1444,7 +1488,6 @@ header {
         padding: var(--section-padding-md);
 
         &__item,
-        &__link,
         &__bottom-text {
             font-size: 1.25rem;
         }
@@ -1557,7 +1600,16 @@ header {
                 background-size: 120px auto;
                 width: 120px;
                 height: 120px;
-                bottom: 52px;
+                bottom: -39px;
+                right: 35px;
+            }
+
+            &:last-of-type::after {
+                background-size: 280px auto;
+                width: 280px;
+                height: 280px;
+                right: -78px;
+                bottom: 206px;
             }
         }
     }
@@ -1645,16 +1697,16 @@ header {
                 background-size: 130px auto;
                 width: 140px;
                 height: 130px;
-                bottom: 65px;
+                bottom: -5px;
                 right: 74px;
             }
 
             &:last-of-type::after {
-                background-size: 160px auto;
-                width: 160px;
-                height: 160px;
-                bottom: 58px;
-                right: 78px;
+                background-size: 170px auto;
+                width: 170px;
+                height: 170px;
+                bottom: 168px;
+                right: 58px;
             }
         }
 
@@ -1696,18 +1748,12 @@ header {
         padding: var(--section-padding-sm);
 
         &__item,
-        &__link,
         &__bottom-text {
             font-size: 1.125rem;
         }
 
         &__bottom-block {
             gap: 10px;
-        }
-
-        &__link {
-            border-radius: 20px;
-            padding: 14px;
         }
 
         &__block {
@@ -1784,7 +1830,7 @@ header {
     .adventure {
         &__block-wrap {
             &:first-of-type::after {
-                bottom: 116px;
+                bottom: 16px;
             }
         }
     }
@@ -1814,8 +1860,8 @@ header {
     .adventure {
         &__block-wrap {
             &:last-of-type::after {
-                bottom: 86px;
-                right: 58px;
+                bottom: 176px;
+                right: 28px;
             }
         }
     }
@@ -1856,13 +1902,14 @@ header {
     .adventure {
         &__block-wrap {
             &:first-of-type::after {
-                bottom: 132px;
+                bottom: 22px;
+
                 right: 62px;
             }
 
             &:last-of-type::after {
-                bottom: 118px;
-                right: 50px;
+                bottom: 200px;
+                right: 20px;
             }
         }
     }
@@ -1887,7 +1934,7 @@ header {
 
         &__block-wrap {
             &:last-of-type::after {
-                bottom: 94px;
+                bottom: 184px;
             }
         }
     }
@@ -1897,8 +1944,8 @@ header {
     .adventure {
         &__block-wrap {
             &:last-of-type::after {
-                bottom: 98px;
-                right: 30px;
+                bottom: 188px;
+                right: 10px;
             }
         }
     }
@@ -1939,6 +1986,13 @@ header {
         &__text-block {
             font-size: 1rem;
             gap: 4px;
+        }
+
+        &__text {
+            &_weight {
+                font-size: 1.125rem;
+                margin-top: 10px;
+            }
         }
     }
 
@@ -1993,13 +2047,13 @@ header {
             gap: 40px;
 
             &:first-of-type::after {
-                bottom: 160px;
+                bottom: 16px;
                 right: 32px;
             }
 
             &:last-of-type::after {
                 right: 22px;
-                bottom: 124px;
+                bottom: 242px;
                 background-size: 130px auto;
                 width: 130px;
                 height: 130px;
@@ -2048,7 +2102,6 @@ header {
         }
 
         &__item,
-        &__link,
         &__bottom-text {
             font-size: 1rem;
         }
@@ -2064,11 +2117,6 @@ header {
         &__title-lesson {
             font-size: 1.125rem;
             margin-bottom: 3px;
-        }
-
-        &__link {
-            width: 100%;
-            text-align: center;
         }
 
         &__button {
